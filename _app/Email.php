@@ -11,19 +11,19 @@ class Email {
     
     public function __construct() {
         
-        $this->mail = new PHPMailer( true);
+        $this->mail = new PHPMailer(true);
         $this->mail->SMTPDebug = 2;                                 // Enable verbose debug output
         $this->mail->isSMTP();                                      // Set mailer to use SMTP
         $this->mail->Host = 'mail.vitor.me';  // Specify main and backup SMTP servers
         $this->mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $this->mail->Username = 'toymaniacos@gmail.com';                 // SMTP username
-        $this->mail->Password = 'globoglobog1';                           // SMTP password
+        $this->mail->Username = 'teste@gmail.com';                 // SMTP username
+        $this->mail->Password = 'teste';                           // SMTP password
         $this->mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
         $this->mail->Port = 587;                                    // TCP port to connect to
         $this->mail->setLanguage('br');
         $this->mail->CharSet = 'utf-8';
         $this->mail->isHTML(true);
-        $this->mail->setFrom('toymaniacos@gmail.com', 'Toy Man');        
+        $this->mail->setFrom('teste@gmail.com', 'Toy Man');        
         
         
     }
